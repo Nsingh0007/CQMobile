@@ -1,0 +1,117 @@
+.team-container {
+  background-color: #f0fcfb;
+  flex-direction: column;
+  position: relative;
+}
+.team-parallax {
+  top: 66% !important;
+}
+
+.team-container,
+.profileContainer {
+  padding: 5rem;
+  padding-left: 11.5rem;
+  padding-right: 11.5rem;
+}
+.team-container h3,
+p {
+  margin: 0.5rem;
+}
+.team-container p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6a7381;
+}
+
+.profileContainer {
+  flex-wrap: wrap;
+  padding-bottom: 3rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  gap: 10rem 12.975rem;
+  transition: all ease-in-out 300ms;
+  background-color: #fff;
+}
+
+@media only screen and (max-width: 993px) {
+  .profileContainer {
+    padding: 6rem;
+    justify-content: center;
+    gap: 10rem 6rem;
+  }
+  .left-content {
+    padding: 2rem;
+  }
+  .top-main-content {
+    padding: 3rem;
+  }
+}
+@media only screen and (max-width: 698px) {
+  .profileContainer {
+    padding: 6rem 3rem;
+    justify-content: center;
+    gap: 10rem 6rem;
+  }
+  .team-container {
+    padding: 3rem;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  .profileContainer {
+    gap: 5rem 3rem;
+    padding: 8rem 2rem;
+  }
+  .left-content {
+    padding: 1rem;
+  }
+  .team-container {
+    padding: 1rem;
+  }
+  .profile-style1 {
+    padding: 4.55rem 0;
+    max-width: 9.438rem;
+    max-height: 14.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .profile-style1 img {
+    max-width: 7.813rem;
+    max-height: 8.375rem;
+    margin: 0 0.8rem;
+  }
+  .profile-content1 {
+    text-align: left;
+    left: 0;
+    bottom: -16px;
+  }
+  .profile-style1 img {
+    max-width: 7.813rem;
+    max-height: 8.375rem;
+    margin: 0 0.8rem;
+    /* bottom: 52%; */
+    bottom: 69px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .profileContainer {
+    gap: 5rem 1rem;
+    padding: 8rem 1rem;
+  }
+}
+@media only screen and (max-width: 362px) {
+  .profileContainer {
+    gap: 5rem 0.5rem;
+    padding: 8rem 0.5rem;
+  }
+  .profile-style1 {
+    max-width: 8.438rem;
+  }
+  .profile-style1 img {
+    max-width: 7.213rem;
+    max-height: 8.175rem;
+    margin: 0 0.6rem;
+  }
+}

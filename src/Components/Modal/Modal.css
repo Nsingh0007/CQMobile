@@ -1,0 +1,152 @@
+.job-card-modal {
+  max-height: 45.625rem;
+  max-width: 28.625rem;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: left;
+  border: 1px solid #e4e8ee;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  position: relative;
+}
+.job-card-head-modal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.job-card-head-modal h3 {
+  margin-left: 1.25rem;
+  font-size: 1rem;
+  color: #202948;
+  font-weight: 700;
+}
+.job-card-head-modal span {
+  width: 43px;
+  height: 43px;
+  border-radius: 25px;
+  background: grey;
+}
+.job-card-sub-head-modal {
+  font-size: 0.875rem;
+  color: black;
+  font-weight: 500;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.1rem auto 1rem 3.5rem;
+}
+.job-card-sub-head-modal .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.3rem;
+}
+.job-detalis-modal {
+  box-sizing: border-box;
+  padding: 0.3rem 0.6rem;
+  border-top: 0.1px solid #e4e8ee;
+  width: 100%;
+  transition: all ease-in-out;
+}
+.detail-head {
+  font-size: 0.975rem;
+  color: black;
+  font-weight: 500;
+}
+.job-content {
+  color: #6a7381;
+  font-size: 12px;
+  margin: 12px 8px 4px 8px;
+}
+.job-modal-info {
+  padding: 0.9rem;
+  padding-top: 0.813rem;
+}
+.job-details-point {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.job-details-point p {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #6a7381;
+  flex-shrink: 1;
+}
+.job-details-point p span {
+  margin-right: 6px;
+  color: black;
+}
+.modal-btn {
+  margin-top: 3.64rem;
+  font-size: 1rem;
+  font-weight: 700;
+  /* border: 2px solid;
+  border-color: buttonborder; */
+}
+.job-card-sub-head-modal span {
+  color: #6a7381;
+  font-size: 0.75rem;
+  margin-left: 8px;
+  font-weight: 500;
+}
+.close-btn {
+  height: 24px;
+  margin: 10px;
+  margin-top: -10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.close-icon {
+  width: 18px;
+  height: 18px;
+}
+.job-card-modal:hover,
+.job-card-modal:focus-within {
+  transform: scale(1);
+  box-shadow: none;
+}
+.right-direction {
+  display: none;
+}
+@media only screen and (max-width: 617px) {
+  .job-card-modal {
+    max-width: 23.625rem;
+  }
+  .job-details-point {
+    margin-top: 1.3rem;
+  }
+}
+@media only screen and (max-width: 485px) {
+  .job-card-modal {
+    max-width: 20.625rem;
+    padding: 1.3rem 1.25rem;
+  }
+  .right-direction {
+    display: inline-flex;
+    margin-left: 11.88px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .job-card-modal {
+    max-width: 15.625rem;
+    padding: 1.3rem 1.15rem;
+    max-height: 42.625rem;
+  }
+  .job-card-head-modal span {
+    width: 46px;
+    height: 39px;
+  }
+  .modal-btn {
+    margin-top: 0.64rem;
+  }
+  .job-modal-info {
+    padding: 0;
+  }
+}

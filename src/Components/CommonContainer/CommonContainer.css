@@ -1,0 +1,8 @@
+.Main-container-outer {
+  width: 100%;
+}
+.Main-container-inner {
+  display: flex;
+  text-align: left;
+  padding: 10rem 5rem;
+}

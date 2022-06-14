@@ -1,0 +1,16 @@
+.slider-outer {
+  overflow-x: scroll;
+  vertical-align: middle;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.slider {
+  align-items: center;
+  vertical-align: middle;
+  display: inline-flex;
+  /* box-sizing: content-box; */
+  width: max-content;
+}
+.slider-outer::-webkit-scrollbar {
+  display: none;
+}

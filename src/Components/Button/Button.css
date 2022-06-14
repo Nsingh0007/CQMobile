@@ -1,0 +1,30 @@
+.bttn {
+  box-sizing: border-box;
+  display: inline-block;
+  justify-self: flex-end;
+  color: #299d90;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #299d90;
+  font-weight: 700;
+  padding: 8px 16px;
+  font-size: 16px;
+  appearance: none;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+/* .bttn:hover {
+  color: #299d90;
+  border: 1px solid #299d90;
+  box-shadow: #1d7066 0 0 0 3px;
+  outline: none;
+} */
