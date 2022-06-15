@@ -81,10 +81,12 @@ function Header() {
             <div className="drawer-top">
               <div
                 onClick={() => {
+                  setIsOpen(false);
                   console.log("first")
                   nav("/")
                   // doScrolling(Home.getBoundingClientRect().top);
-                  // setIsOpen(false);
+                  
+                  scroll()
                 }}
               >
                 Home
@@ -92,8 +94,9 @@ function Header() {
               <div
                 onClick={() => {
                   nav("/team")
-                  doScrolling(Team.getBoundingClientRect().y);
+                  
                   setIsOpen(false);
+                  scroll()
                 }}
               >
                 Team
@@ -101,8 +104,9 @@ function Header() {
               <div
                 onClick={() => {
                  
-                  doScrolling(Investors.getBoundingClientRect().y);
+                  
                   setIsOpen(false);
+                  scroll()
                 }}
               >
                 Investors
