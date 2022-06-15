@@ -296,5 +296,12 @@
   .footer-right ul {
     padding: 0px;
     margin: 0;
+    width: 100%;
+
+    justify-content: space-between;
+  }
+  .footer-right ul :last-child {
+    padding-right: 0px;
+    margin-right: 0px;
   }
 }

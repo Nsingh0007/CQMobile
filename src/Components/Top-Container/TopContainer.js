@@ -35,8 +35,8 @@ function TopContainer({ TopContent }) {
       >
         <h2>{TopContent.heading}</h2>
         <p>{TopContent.subText}</p>
-
-        <img className="common-card-image" src={TopContent.cardImg} />
+        {TopContent.cardImg}
+        {/* <img className="common-card-image" src={TopContent.cardImg} /> */}
       </Container>
     </div>
   );

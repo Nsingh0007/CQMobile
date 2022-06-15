@@ -42,18 +42,18 @@ function Home() {
     let st = window.scrollY || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > lastScrollTop) {
       // downscroll code
-
+console.log("down")
       if (position > 0) {
         setOpacity(opa);
         if (322 < right && right < 366) {
           console.log("righttt", right);
-          setRotateRight(360);
+          setRotateRight(right);
         } else {
         }
         if (-10 < left && left < 42) {
           console.log("first", left, 0 < left && left < 42);
 
-          setRotateLeft(0);
+          setRotateLeft(left);
         }
       }
     } else {
@@ -62,11 +62,11 @@ function Home() {
         setOpacity(opa * 10);
 
         if (!322 < right && right < 366) {
-          setRotateRight(320);
+          setRotateRight(right);
         } else {
         }
         if (!0 < left && left < 42) {
-          setRotateLeft(42);
+          setRotateLeft(left);
         }
       }
     }
@@ -76,13 +76,55 @@ function Home() {
     dir();
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+const mobileScroll=(e)=>{
+  let touchStartPosX = 0;
+  // Different devices give different values with different decimal percentages.
+  const currentPageX = Math.round(e.changedTouches[0].scrollY);
+  if (touchStartPosX === currentPageX) return;
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  if (touchStartPosX - currentPageX > 0) {
+    if(currentPageX<499){
+       console.log("down");
+    }
+   
+  } else {
+    console.log("up");
+  }
+  touchStartPosX = currentPageX;
+  
+}
+
+
+
+  // useEffect(() => {
+  //   let touchStartPosX = 0;
+    
+  //   window.addEventListener('touchmove', (e) => {
+  //    // Different devices give different values with different decimal percentages.
+  //     const currentPageX = Math.round(e.changedTouches[0].screenY);
+  //     if (touchStartPosX === currentPageX) return;
+  
+  //     if (touchStartPosX - currentPageX > 0) {
+  //       console.log("down");
+  //       setRotateRight(currentPageX)
+  //       setRotateLeft(-currentPageX)
+  //     } else {
+  //       console.log("up",currentPageX);
+  //       setRotateRight(currentPageX)
+  //       setRotateLeft(-currentPageX)
+  //     }
+  //     touchStartPosX = currentPageX;
+  //   });
+  
+
+
+
+  //   // window.addEventListener("scroll", handleScroll);
+   
+  //   // return () => {
+  //   //   window.removeEventListener("scroll", handleScroll);
+  //   // };
+  // }, []);
   const navigate = useNavigate();
   const handleNavigate = (page) => {
     navigate(page);

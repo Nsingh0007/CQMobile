@@ -5,6 +5,11 @@
 }
 .team-parallax {
   top: 66% !important;
+  background: linear-gradient(
+    177.8deg,
+    #f0fcfb 1.96%,
+    rgba(255, 255, 255) 98.26%
+  ) !important;
 }
 
 .team-container,
@@ -13,16 +18,17 @@
   padding-left: 11.5rem;
   padding-right: 11.5rem;
 }
-.team-container h3,
-p {
-  margin: 0.5rem;
-}
+
 .team-container p {
   font-size: 14px;
   font-weight: 500;
   color: #6a7381;
 }
-
+.profile-style1 > .profile-img-background {
+  padding-bottom: 0;
+}
+.profile-img-background {
+}
 .profileContainer {
   flex-wrap: wrap;
   padding-bottom: 3rem;
@@ -30,7 +36,12 @@ p {
   padding-bottom: 8rem;
   gap: 10rem 12.975rem;
   transition: all ease-in-out 300ms;
-  background-color: #fff;
+
+  background: linear-gradient(
+    177.8deg,
+    #f0fcfb 1.96%,
+    rgba(255, 255, 255) 98.26%
+  );
 }
 
 @media only screen and (max-width: 993px) {
@@ -48,7 +59,7 @@ p {
 }
 @media only screen and (max-width: 698px) {
   .profileContainer {
-    padding: 6rem 3rem;
+    padding: 6rem 1rem;
     justify-content: center;
     gap: 10rem 6rem;
   }
@@ -60,8 +71,8 @@ p {
 
 @media only screen and (max-width: 630px) {
   .profileContainer {
-    gap: 5rem 3rem;
-    padding: 8rem 2rem;
+    gap: 5rem 0.5rem;
+    padding: 8rem 1rem;
   }
   .left-content {
     padding: 1rem;
@@ -98,20 +109,112 @@ p {
 @media only screen and (max-width: 426px) {
   .profileContainer {
     gap: 5rem 1rem;
-    padding: 8rem 1rem;
+    background: linear-gradient(
+      177.8deg,
+      #f0fcfb 1.96%,
+      rgba(255, 255, 255) 98.26%
+    );
   }
+  .commonClass h2 {
+    /* H1-800 */
+
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 42px;
+    /* or 131% */
+
+    text-align: center;
+
+    /* Primary/Primary G1 */
+
+    color: #299d90;
+  }
+  .top-content p {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+
+    text-align: center;
+
+    /* Grey Scale/Neutral 600 */
+
+    color: #6a7381;
+  }
+  .profile-style1 img {
+    /* max-width: 6.1rem; */
+  }
+  .profile-img-background {
+    left: 3.1%;
+  }
+  .profileContainer {
+    gap: 5rem 0.5rem;
+    /* padding: 8rem 2rem; */
+    background: linear-gradient(
+      177.8deg,
+      #f0fcfb 1.96%,
+      rgba(255, 255, 255) 98.26%
+    );
+  }
+  .team-parallax {
+    background: #f0fcfb !important;
+  }
+
+  /* .profile-style1 {
+    max-width: 39% !important;
+  }
+  .profileContainer {
+    gap: 5rem 0.5rem;
+    padding: 8rem 1.4rem;
+  }
+  .profile-content-box,
+  .profile-style1 {
+    padding: 90px 0;
+  }
+  .profile-style1 > .profile-img-background {
+    bottom: 52%;
+    padding: 8px;
+    left: 1%;
+    padding-bottom: 0;
+  }
+  .profile-content1 {
+    bottom: 3px;
+  }
+  .profile-content1 h4 {
+    margin: 6px 0px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #202948;
+  }
+  .profile-content1 p {
+    margin: 6px 0px;
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6a7381;
+  }
+  .profile-content1:last-child {
+    color: #a8b1bd;
+  } */
 }
 @media only screen and (max-width: 362px) {
   .profileContainer {
-    gap: 5rem 0.5rem;
-    padding: 8rem 0.5rem;
+    gap: 5rem 0rem;
+    padding: 8rem 0.4rem;
   }
-  .profile-style1 {
+  /* .profile-style1 {
     max-width: 8.438rem;
-  }
-  .profile-style1 img {
+  } */
+  /* .profile-style1 img {
     max-width: 7.213rem;
     max-height: 8.175rem;
     margin: 0 0.6rem;
-  }
+  } */
 }

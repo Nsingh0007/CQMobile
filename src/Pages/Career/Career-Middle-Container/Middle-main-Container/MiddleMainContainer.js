@@ -30,7 +30,7 @@ function MiddleMainContainer() {
   };
   return (
     <Container inner="cheq-container">
-      <h3 className="head-title">Life at CheQ</h3>
+      <h3 className="head-title">Life at Cheq</h3>
       <Container inner="cheq-content">
         <div className="cheq-left">
           {Data.map((content, key) => (

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SVG } from "../../assets/icons/icons-png";
+import {MenuIcon,BurgerMenu,CheqLogo} from "../../assets/icons/Icon-container"
 import $ from "jquery";
 import Button from "../Button/Button";
+
 import "./Header.css";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +14,13 @@ function Header() {
   let ContactUs = null;
 
   useEffect(() => {
+    // window.scrollTo(1436,1436)
+
+   
+
+
+
+    document.querySelector('.parallax__layer--base').scrollTo(0,0)
     Home = document.getElementsByClassName("parallax__layer")[0];
 
     Team = document.getElementsByClassName("people-container")[0];
@@ -48,29 +57,39 @@ function Header() {
       });
     }
   }
+  function scroll(element){   
+    
+    var ele = document.getElementsByClassName("top-main-content")[0];   
+    console.log("ele",ele.offsetTop)
+    window.scrollTo(ele.offsetLeft,ele.offsetTop); } 
+  
   return (
     <div className="header-container">
       <div className="header-main">
         <div className={`hamburger-icon`} onClick={() => setIsOpen(!isOpen)}>
-          <img src={isOpen ? SVG.CROSS_ICON : SVG.BURGER} className="icon" />
+          
+          {!isOpen ? <MenuIcon className="icon"/> : <BurgerMenu className="icon"/>}
+          {/* <img src={isOpen ? SVG.CROSS_ICON : SVG.BURGER} className="icon" /> */}
         </div>
         <div className="header-logo">
-          <img src={SVG.CHEQ_LOGO} className="head-icon cheq-icon" />
+          <CheqLogo className="head-icon cheq-icon" />
+          {/* <img src={SVG.CHEQ_LOGO} className="head-icon cheq-icon" /> */}
         </div>
         <div className="right-side">
           <div className={`header-link-container ${isOpen && "drawer-open"}`}>
             <div className="drawer-top">
               <div
                 onClick={() => {
-                  doScrolling(Home.getBoundingClientRect().top);
-                  setIsOpen(false);
+                  console.log("first")
+                  // doScrolling(Home.getBoundingClientRect().top);
+                  // setIsOpen(false);
                 }}
               >
                 Home
               </div>
               <div
                 onClick={() => {
-                  doScrolling(Team.getBoundingClientRect().top);
+                  doScrolling(Team.getBoundingClientRect().y);
                   setIsOpen(false);
                 }}
               >
@@ -78,7 +97,7 @@ function Header() {
               </div>
               <div
                 onClick={() => {
-                  doScrolling(Investors.getBoundingClientRect().top);
+                  doScrolling(Investors.getBoundingClientRect().y);
                   setIsOpen(false);
                 }}
               >
@@ -86,11 +105,13 @@ function Header() {
               </div>
               <div
                 onClick={() => {
-                  doScrolling(ContactUs.getBoundingClientRect().top);
+                  
+                  // doScrolling(ContactUs.getBoundingClientRect().y);
                   setIsOpen(false);
+                  scroll()
                 }}
               >
-                Contact us
+                Carrers
               </div>
             </div>
             <div className="drawer-bottom"></div>

@@ -12,23 +12,23 @@ function Team() {
     subText:
       "Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding",
     cardImg: SVG.FANS_PIC,
-    classname: "",
+    classname: "top-content",
   };
 
   return (
     <>
-      <div class="parallax__layer parallax__layer--back">
+      <div class="parallax__layer parallax__layer--back teampage">
         <TopContainer TopContent={TopContent} />
       </div>
       <div class="parallax">
         <div class="parallax__layer-1 parallax__layer--base team-parallax">
-          <Container inner="team-container">
+          <Container inner="team-container top-home-container">
             <h3 className="head-title">A - Team</h3>
             <p>
               Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding
               way.
             </p>
-            <div className="background-blur"></div>
+            <div className="background-blur-team"></div>
           </Container>
           <Container inner="profileContainer">
             {ProfileData.map((profile, index) => (

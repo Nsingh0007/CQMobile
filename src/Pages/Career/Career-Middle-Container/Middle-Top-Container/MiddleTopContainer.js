@@ -17,7 +17,7 @@ function MiddleTopContainer() {
   return (
     <>
       <Container outer="" inner="middle-container">
-        <h3 className="head-title">Our Values</h3>
+        <h3 className="head-title">Core Values</h3>
         <Container outer="" inner="flex-container">
           {ValueData.map((data, index) => (
             <ValueCard key={index} data={data} />

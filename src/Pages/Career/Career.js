@@ -1,5 +1,7 @@
 import React from "react";
+import { CareerSVG } from "../../assets/icons/Icon-container";
 import { SVG } from "../../assets/icons/icons-png";
+
 import Footer from "../../Components/Footer/Footer";
 import TopContainer from "../../Components/Top-Container/TopContainer";
 import "../../css/Career.css";
@@ -10,8 +12,8 @@ function Career() {
     heading: "Join us in the journey to best",
     subText:
       "Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding",
-    cardImg: SVG.BIAS_ACTION,
-    classname: "",
+    cardImg: <CareerSVG className="common-card-image"/>,
+    classname: "top-content",
   };
   return (
     <div className="main">

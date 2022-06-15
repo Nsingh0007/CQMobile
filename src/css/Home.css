@@ -114,13 +114,13 @@
 }
 .Mobile-image-container {
   display: flex;
-  /* align-items: center;
+  /* /* align-items: center; */
   justify-content: center;
-  transform: translateZ(1px); */
-  /* position: absolute;
+  /* transform: translateZ(1px); */
+  /* position: absolute; */
   left: 0;
   right: 0;
-  top: 31%; */
+  /* top: 39%; */
 }
 .Mobile-box {
   display: flex;
@@ -364,9 +364,7 @@
   .left-content {
     padding: 0rem;
   }
-  .top-content h2 {
-    margin-left: 0;
-  }
+
   .top-content p {
     margin-left: 0;
   }
@@ -416,7 +414,6 @@
   .top-home-container {
     display: block;
     text-align: left;
-    width: 100%;
   }
 
   .top-home-container h3 {
@@ -499,14 +496,28 @@
     font-size: 20px;
   }
 }
-@media only screen and (max-width: 689px) {
-  .top-content h2 {
-    font-size: 3.6rem;
-    margin: 2.5rem 1rem;
+@media only screen and (max-width: 768px), screen and (max-width: 425px) {
+  .App {
+    display: block;
   }
   .top-content {
-    padding: 101px 40px;
+    padding: 15% 0 0 0;
   }
+  .top-content h2 {
+    max-width: 80%;
+  }
+  .square-box {
+    padding: 20%;
+  }
+}
+@media only screen and (max-width: 689px) {
+  /* .top-content h2 {
+    font-size: 3.6rem;
+    margin: 2.5rem 1rem;
+  } */
+  /* .top-content {
+    padding: 101px 40px;
+  } */
 }
 @media only screen and (max-width: 630px) {
   .profile-style img {
@@ -521,11 +532,11 @@
   }
 }
 @media only screen and (max-width: 542px) {
-  .top-content h2 {
+  /* .top-content h2 {
     font-size: 2rem;
     max-width: 17.125rem;
     margin: 5px;
-  }
+  } */
   .top-content p {
     max-width: 17.688rem;
     font-size: 0.875rem;
@@ -548,10 +559,7 @@
     padding: 5rem 2rem;
   }
 }
-@media only screen and (max-width: 425px) {
-  .App {
-    display: block;
-  }
+@media only screen and (max-device-width: 480px) {
   .header-main {
     padding: 10px 0 10px 0;
   }
@@ -600,20 +608,22 @@
     margin: 1rem;
   }
   .square-box {
-    padding: 70px;
+    /* padding: 70px; */
     margin: 1%;
   }
 
   /* ################# */
   .top-content {
     padding: 101px 40px;
+    position: fixed;
+    top: 0;
   }
-  .top-content h2 {
+  /* .top-content h2 {
     font-size: 32px;
     max-width: 800px;
     margin: 5px;
     max-width: 274px;
-  }
+  } */
   .top-content p {
     margin: 16px 0 0 0;
     max-width: 283px;
@@ -628,23 +638,24 @@
   }
   .parallax__layer-1 {
     position: relative;
-    top: -128px;
+    top: 65%;
   }
   .parallax__layer--base {
     position: relative;
     background: #fff;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .parallax__layer {
-    position: relative;
+    position: fixed;
     right: 0;
     left: 0;
   }
+
   .top-home-container h3 {
     margin: 0;
   }
   .top-home-container {
-    padding: 56px 0 0 24px;
+    padding: 56px 24px 0 24px;
   }
   .head-title {
     font-family: "Manrope";
@@ -732,8 +743,6 @@
   .square-box {
     box-sizing: border-box;
 
-    width: 162.2px;
-    height: 138px;
     margin: 9px 6px;
     /* Grey Scale/Neutral White */
 
@@ -890,7 +899,7 @@
     align-items: center;
     /* padding: 15rem; */
     /* position: absolute; */
-    top: -244px;
+    top: 300px;
     align-self: center;
     align-items: center;
     justify-self: center;

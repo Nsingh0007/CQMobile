@@ -55,10 +55,6 @@
     font-size: 2.375rem;
     margin: 6px;
   }
-  .commonClass {
-    padding: 2rem;
-    padding-left: 3rem;
-  }
 }
 @media only screen and (max-width: 456px) {
   .commonClass h2 {
