@@ -1,4 +1,5 @@
 import React from "react";
+import { TeamSVG } from "../../assets/icons/Icon-container";
 import { SVG } from "../../assets/icons/icons-png";
 import ProfileContainer from "../../Components/Card/ProfileCard/ProfileContainer";
 import Container from "../../Components/CommonContainer/CommonContainer";
@@ -11,7 +12,7 @@ function Team() {
     heading: "Meet the founders & Team",
     subText:
       "Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding",
-    cardImg: SVG.FANS_PIC,
+    cardImg: <TeamSVG/>,
     classname: "top-content",
   };
 
