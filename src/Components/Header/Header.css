@@ -123,10 +123,10 @@
     border: 1px solid #a8b1bd;
     padding: 8px 14px;
   }
-  .join-btn:hover {
+  /* .join-btn:hover {
     border: 1px solid #7d838b;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
+  } */
   .header-link-container {
     display: flex;
     flex-direction: column;

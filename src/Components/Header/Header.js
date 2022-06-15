@@ -64,6 +64,24 @@ function Header() {
     console.log("ele",ele.offsetTop)
     window.scrollTo(ele.offsetLeft,ele.offsetTop); } 
   
+
+    const scrollToBottom = () =>{ 
+
+      window.scrollTo({ 
+  
+        top: document.documentElement.scrollHeight, 
+  
+        behavior: 'auto'
+  
+        /* you can also use 'auto' behaviour 
+  
+           in place of 'smooth' */
+  
+      }); 
+  
+    }; 
+
+
   return (
     <div className="header-container">
       <div className="header-main">
@@ -124,7 +142,7 @@ function Header() {
             </div>
             <div className="drawer-bottom"></div>
           </div>
-          <Button bttnClass="join-btn">Join Us</Button>
+          <Button bttnClass="join-btn" onClick={()=>scrollToBottom()}>Join Us</Button>
         </div>
       </div>
     </div>
