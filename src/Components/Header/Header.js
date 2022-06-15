@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { SVG } from "../../assets/icons/icons-png";
 import {MenuIcon,BurgerMenu,CheqLogo} from "../../assets/icons/Icon-container"
 import $ from "jquery";
@@ -7,6 +7,7 @@ import Button from "../Button/Button";
 
 import "./Header.css";
 function Header() {
+  const nav = useNavigate()
   const [isOpen, setIsOpen] = useState(false);
   let Home = null;
   let Team = null;
@@ -81,6 +82,7 @@ function Header() {
               <div
                 onClick={() => {
                   console.log("first")
+                  nav("/")
                   // doScrolling(Home.getBoundingClientRect().top);
                   // setIsOpen(false);
                 }}
@@ -89,6 +91,7 @@ function Header() {
               </div>
               <div
                 onClick={() => {
+                  nav("/team")
                   doScrolling(Team.getBoundingClientRect().y);
                   setIsOpen(false);
                 }}
@@ -97,6 +100,7 @@ function Header() {
               </div>
               <div
                 onClick={() => {
+                 
                   doScrolling(Investors.getBoundingClientRect().y);
                   setIsOpen(false);
                 }}
@@ -105,7 +109,7 @@ function Header() {
               </div>
               <div
                 onClick={() => {
-                  
+                  nav("/career")
                   // doScrolling(ContactUs.getBoundingClientRect().y);
                   setIsOpen(false);
                   scroll()

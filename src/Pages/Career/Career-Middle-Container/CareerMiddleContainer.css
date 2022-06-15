@@ -529,6 +529,7 @@
   .job-container,
   .cheq-container {
     padding: 2.5rem;
+    padding: 1rem;
   }
   /* .cheq-container {
     padding: 5rem 3rem;
@@ -553,7 +554,7 @@
     margin: 3% 1.8%;
   }
 } */
-@media only screen and (max-width: 483px) and (min-width: 386px) {
+@media only screen and (max-width: 483px) and (min-width: 390px) {
   /* .flex-container {
     justify-content: center;
   } */
@@ -564,7 +565,13 @@
   .middle-container,
   .job-container,
   .cheq-container {
-    padding: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .flex-container {
+    gap: 12px;
   }
 }
 @media only screen and (max-width: 385px) {
