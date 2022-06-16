@@ -8,7 +8,7 @@ function MiddleTopContainer() {
   const ValueCard = ({ data }) => {
     return (
       <Card container="value-card">
-        <img src={data.image} alt="" />
+        <div className="core-values-icon">{data.image}</div>
         <h3>{data.header}</h3>
         <p>{data.text}</p>
       </Card>

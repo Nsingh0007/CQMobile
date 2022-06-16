@@ -40,13 +40,13 @@ function MiddleMainContainer() {
         <div className="cheq-right">
           <div className="imageContainer">
             <div className="item">
-              <img src={SVG.SWIM} />
+              <img src={SVG.LIFE_AT_CHEQ1} />
             </div>
             <div className="item">
-              <img src={SVG.GROUP} />
+              <img src={SVG.LIFE_AT_CHEQ2} />
             </div>
             <div className="item big">
-              <img src={SVG.OFFICE} />
+              <img src={SVG.LIFE_AT_CHEQ3} />
             </div>
           </div>
         </div>

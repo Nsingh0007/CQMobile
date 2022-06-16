@@ -25,6 +25,11 @@ import PartyIcon from "../Images/PartyIcon.png";
 import ArrowIcon from "../Images/left-arrow.png";
 import CloseIcon from "../Images/close.png";
 import RightDirection from "../Images/rightDirection.png";
+import LifeAtCheq1 from '../Images/LifeAtCheq1.png'
+import LifeAtCheq2 from '../Images/LifeAtCheq2.png'
+import LifeAtCheq3 from '../Images/LifeAtCheq3.png'
+
+
 export const SVG = {
   CHEQ_LOGO: cheqLogo,
   BURGER: Burger,
@@ -53,4 +58,9 @@ export const SVG = {
   ARROW: ArrowIcon,
   CLOSE_ICON: CloseIcon,
   RIGHT_DIRECTION: RightDirection,
+  LIFE_AT_CHEQ1:LifeAtCheq1,
+  LIFE_AT_CHEQ2:LifeAtCheq2,
+  LIFE_AT_CHEQ3:LifeAtCheq3
+
+
 };

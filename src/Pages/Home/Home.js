@@ -9,15 +9,11 @@ import TopContainer from "../../Components/Top-Container/TopContainer";
 import "../../css/Home.css";
 import Footer from "../../Components/Footer/Footer";
 import { NewsData, ProfileData } from "../../Data/DummyData";
-import LeftMobile from "../../assets/Images/DEVICES/left_mobile.png"
-import RightMobile from "../../assets/Images/DEVICES/Right_mobile.png"
-import MiddleMobile from "../../assets/Images/DEVICES/Middle_mobile.png"
+import LeftMobile from "../../assets/Images/DEVICES/left_mobile.png";
+import RightMobile from "../../assets/Images/DEVICES/Right_mobile.png";
+import MiddleMobile from "../../assets/Images/DEVICES/Middle_mobile.png";
 
-import {
-
-  MultiTaskingImage,
-
-} from "../../assets/icons/Icon-container";
+import { MultiTaskingImage } from "../../assets/icons/Icon-container";
 import { useNavigate } from "react-router-dom";
 
 function Home() {
@@ -94,34 +90,30 @@ function Home() {
     dir();
   };
 
-const mobileScroll=(e)=>{
-  let touchStartPosX = 0;
-  // Different devices give different values with different decimal percentages.
-  const currentPageX = Math.round(e.changedTouches[0].scrollY);
-  if (touchStartPosX === currentPageX) return;
+  const mobileScroll = (e) => {
+    let touchStartPosX = 0;
+    // Different devices give different values with different decimal percentages.
+    const currentPageX = Math.round(e.changedTouches[0].scrollY);
+    if (touchStartPosX === currentPageX) return;
 
-  if (touchStartPosX - currentPageX > 0) {
-    if(currentPageX<499){
-       console.log("down");
+    if (touchStartPosX - currentPageX > 0) {
+      if (currentPageX < 499) {
+        console.log("down");
+      }
+    } else {
+      console.log("up");
     }
-   
-  } else {
-    console.log("up");
-  }
-  touchStartPosX = currentPageX;
-  
-}
-
-
+    touchStartPosX = currentPageX;
+  };
 
   // useEffect(() => {
   //   let touchStartPosX = 0;
-    
+
   //   window.addEventListener('touchmove', (e) => {
   //    // Different devices give different values with different decimal percentages.
   //     const currentPageX = Math.round(e.changedTouches[0].screenY);
   //     if (touchStartPosX === currentPageX) return;
-  
+
   //     if (touchStartPosX - currentPageX > 0) {
   //       console.log("down");
   //       setRotateRight(currentPageX)
@@ -133,12 +125,9 @@ const mobileScroll=(e)=>{
   //     }
   //     touchStartPosX = currentPageX;
   //   });
-  
-
-
 
   //   // window.addEventListener("scroll", handleScroll);
-   
+
   //   // return () => {
   //   //   window.removeEventListener("scroll", handleScroll);
   //   // };
@@ -149,10 +138,7 @@ const mobileScroll=(e)=>{
   };
   return (
     <>
-      <div
-        onScroll={() => handleScroll()}
-        className="parallax scrollClass"
-      >
+      <div onScroll={() => handleScroll()} className="parallax scrollClass">
         <div class="parallax__layer parallax__layer--back">
           <Container
             inner={`commonClass ${
@@ -163,28 +149,23 @@ const mobileScroll=(e)=>{
             <p style={{ opacity: opacity }}>{TopContent.subText}</p>
           </Container>
         </div>
-
+        {/* <div className="parallax__group"> */}
         <div className="parallax-mobile-container Mobile-image-container">
           <div className="Mobile-box">
             <div
               style={{ transform: `rotate(${rotateRight}deg)` }}
               className={`left-mobile-pic `}
             >
-              <img src={LeftMobile}  className="side-mobile" />
-              
+              <img src={LeftMobile} className="side-mobile" />
             </div>
             <div
               style={{ transform: `rotate(${rotateLeft}deg)` }}
               className={`right-mobile-pic `}
             >
-              <img src={RightMobile} className="side-mobile"/>
-
-              
+              <img src={RightMobile} className="side-mobile" />
             </div>
             <div className="middle-mobile-pic">
-            <img src={MiddleMobile} className="middle-mobile" />
-
-              
+              <img src={MiddleMobile} className="middle-mobile" />
             </div>
           </div>
         </div>
@@ -194,7 +175,7 @@ const mobileScroll=(e)=>{
               <h3 className="head-title">Our People</h3>
               <p>
                 We’re excited to announce that CheQ has raised in seed funding
-                from ABC
+                from ABC {window.innerHeight}
               </p>
             </div>
             <div className="people-bottom-container">
@@ -219,7 +200,7 @@ const mobileScroll=(e)=>{
             </div>
             <div className="background-blur"></div>
           </Container>
-          <Container inner="home-middle-container" >
+          <Container inner="home-middle-container">
             <div className="flex-left blessed-left-flex">
               <h3 className="blessed-title head-title">Blessed & Backed by</h3>
               <p className="blessed-text-content">
@@ -228,7 +209,8 @@ const mobileScroll=(e)=>{
                 </span>
                 <span>
                   We’re excited to announce that CheQ has raised{" "}
-                  <span className="bold">$34</span> in seed funding from {"\n"} ABC
+                  <span className="bold">$34</span> in seed funding from {"\n"}{" "}
+                  ABC
                 </span>
               </p>
             </div>
@@ -273,6 +255,7 @@ const mobileScroll=(e)=>{
           </div>
           <Footer />
         </div>
+        {/* </div> */}
       </div>
     </>
   );

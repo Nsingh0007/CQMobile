@@ -339,6 +339,30 @@
 .blessed-left-flex {
   align-items: flex-start;
 }
+.parallax__group {
+  /* position: relative; */
+  height: 15vh;
+  /* transform-style: preserve-3d; */
+}
+@media (min-height: 553px) and (max-height: 809px) {
+  .parallax__layer-1 {
+    position: relative;
+    top: 70% !important;
+  }
+}
+@media only screen and (max-device-height: 809px) {
+  .parallax__layer-1 {
+    position: relative;
+    top: 56%;
+  }
+}
+@media only screen and (max-device-height: 896px) {
+  .parallax__layer-1 {
+    position: relative;
+    top: 56%;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .people-btn-below {
     display: block;

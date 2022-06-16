@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { SVG } from "../../assets/icons/icons-png";
-import {MenuIcon,BurgerMenu,CheqLogo} from "../../assets/icons/Icon-container"
+import {
+  MenuIcon,
+  BurgerMenu,
+  CheqLogo,
+} from "../../assets/icons/Icon-container";
 import $ from "jquery";
 import Button from "../Button/Button";
 
 import "./Header.css";
 function Header() {
-  const nav = useNavigate()
+  const nav = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   let Home = null;
   let Team = null;
@@ -17,11 +21,7 @@ function Header() {
   useEffect(() => {
     // window.scrollTo(1436,1436)
 
-   
-
-
-
-    document.querySelector('.parallax__layer--base').scrollTo(0,0)
+    document.querySelector(".parallax__layer--base").scrollTo(0, 0);
     Home = document.getElementsByClassName("parallax__layer")[0];
 
     Team = document.getElementsByClassName("people-container")[0];
@@ -58,36 +58,33 @@ function Header() {
       });
     }
   }
-  function scroll(element){   
-    
-    var ele = document.getElementsByClassName("top-main-content")[0];   
-    console.log("ele",ele.offsetTop)
-    window.scrollTo(ele.offsetLeft,ele.offsetTop); } 
-  
+  function scroll(element) {
+    var ele = document.getElementsByClassName("top-main-content")[0];
+    console.log("ele", ele.offsetTop);
+    window.scrollTo(ele.offsetLeft, ele.offsetTop);
+  }
 
-    const scrollToBottom = () =>{ 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
 
-      window.scrollTo({ 
-  
-        top: document.documentElement.scrollHeight, 
-  
-        behavior: 'auto'
-  
-        /* you can also use 'auto' behaviour 
+      behavior: "auto",
+
+      /* you can also use 'auto' behaviour 
   
            in place of 'smooth' */
-  
-      }); 
-  
-    }; 
-
+    });
+  };
 
   return (
     <div className="header-container">
       <div className="header-main">
         <div className={`hamburger-icon`} onClick={() => setIsOpen(!isOpen)}>
-          
-          {!isOpen ? <MenuIcon className="icon"/> : <BurgerMenu className="icon"/>}
+          {!isOpen ? (
+            <MenuIcon className="icon" />
+          ) : (
+            <BurgerMenu className="icon" />
+          )}
           {/* <img src={isOpen ? SVG.CROSS_ICON : SVG.BURGER} className="icon" /> */}
         </div>
         <div className="header-logo">
@@ -100,41 +97,39 @@ function Header() {
               <div
                 onClick={() => {
                   setIsOpen(false);
-                  console.log("first")
-                  nav("/")
+                  console.log("first");
+                  nav("/");
                   // doScrolling(Home.getBoundingClientRect().top);
-                  
-                  scroll()
+
+                  scroll();
                 }}
               >
                 Home
               </div>
               <div
                 onClick={() => {
-                  nav("/team")
-                  
+                  nav("/team");
+
                   setIsOpen(false);
-                  scroll()
+                  scroll();
                 }}
               >
                 Team
               </div>
               <div
                 onClick={() => {
-                 
-                  
                   setIsOpen(false);
-                  scroll()
+                  scroll();
                 }}
               >
                 Investors
               </div>
               <div
                 onClick={() => {
-                  nav("/career")
+                  nav("/career");
                   // doScrolling(ContactUs.getBoundingClientRect().y);
                   setIsOpen(false);
-                  scroll()
+                  scroll();
                 }}
               >
                 Carrers
@@ -142,7 +137,9 @@ function Header() {
             </div>
             <div className="drawer-bottom"></div>
           </div>
-          <Button bttnClass="join-btn" onClick={()=>scrollToBottom()}>Join Us</Button>
+          <Button bttnClass="join-btn" handleFunction={() => nav("career")}>
+            Join Us
+          </Button>
         </div>
       </div>
     </div>

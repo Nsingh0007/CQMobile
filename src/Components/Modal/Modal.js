@@ -14,6 +14,7 @@ const customStyles = {
     padding: "0",
     border: "none",
     overflowX: "hidden",
+    zIndex: "1000000",
   },
 };
 Modal.setAppElement("#root");
@@ -30,16 +31,16 @@ const CustomModal = ({ job, modalIsOpen, setJob, setIsOpen }) => {
       style={customStyles}
     >
       <Card container="job-card-modal">
-        <div className="close-btn" onClick={() => closeModal()}>
-          {" "}
-          <img src={SVG.CLOSE_ICON} className="close-icon" />
-        </div>
         <div className="job-modal-info">
           <div className="job-card-head-modal">
             <span>
               <img src={job?.profile_pic} className="card-image" />
             </span>
             <h3>{job?.heading}</h3>
+            <div className="close-btn" onClick={() => closeModal()}>
+              {" "}
+              <img src={SVG.CLOSE_ICON} className="close-icon" />
+            </div>
           </div>
           <p className="job-card-sub-head-modal">
             <img src={SVG.LOCATION_ICON} className="icon" />
@@ -52,28 +53,51 @@ const CustomModal = ({ job, modalIsOpen, setJob, setIsOpen }) => {
         <div className="job-details-modal">
           <p className="detail-head">Details</p>
           <p className="job-content">{job?.content}</p>
-          <div className="job-details-point">
-            <p>
-              <span>●</span>A product designer is responsible for the design and
-              development of consumer products.
-            </p>
-            <p>
-              <span>●</span>A product designer is responsible for the design and
-              development of consumer products.
-            </p>
-            <p>
-              <span>●</span>A product designer is responsible for the design and
-              development of consumer products.
-            </p>
-            <p>
-              <span>●</span>A product designer is responsible for the design and
-              development of consumer products.
-            </p>
-            <p>
-              <span>●</span>A product designer is responsible for the design and
-              development of consumer products.
-            </p>
+          <div className="job-details-container">
+            <div className="job-details-point">
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>{" "}
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+              <p>
+                <span>●</span>A product designer is responsible for the design
+                and development of consumer products.
+              </p>
+            </div>
           </div>
+
           <button className="apply-btn modal-btn">
             Apply
             <span className="right-direction">

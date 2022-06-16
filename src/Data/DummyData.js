@@ -1,3 +1,4 @@
+import { Centricity, OwnerPng } from "../assets/icons/Icon-container";
 import { SVG } from "../assets/icons/icons-png";
 
 export const ProfileData = [
@@ -40,22 +41,22 @@ export const ProfileData = [
 ];
 export const ValueData = [
   {
-    image: SVG.OWNER,
+    image: <OwnerPng/>,
     header: "Ownership",
     text: "We act like owners — This is our company. We own the problems .",
   },
   {
-    image: SVG.CENTRICITY,
+    image: <Centricity />,
     header: "Customer centricity",
     text: "We act like owners — This is our company. We own the problems .",
   },
   {
-    image: SVG.BIAS_ACTION,
+    image: <OwnerPng />,
     header: "Bias for Action",
     text: "We act like owners — This is our company. We own the problems .",
   },
   {
-    image: SVG.TRUST,
+    image: <OwnerPng />,
     header: "Trust",
     text: "We act like owners — This is our company. We own the problems .",
   },
@@ -115,5 +116,6 @@ export const NewsData = [
   { img: SVG.NEWS_ICON1 },
   { img: SVG.NEWS_ICON2 },
   { img: SVG.NEWS_ICON3 },
+  { img: SVG.NEWS_ICON4 },
   { img: SVG.NEWS_ICON4 },
 ];

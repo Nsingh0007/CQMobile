@@ -1,5 +1,5 @@
 .job-card-modal {
-  max-height: 45.625rem;
+  max-height: 38.625rem;
   max-width: 28.625rem;
   margin: 1rem 0;
   padding: 1.5rem;
@@ -24,7 +24,7 @@
   font-weight: 700;
 }
 .job-card-head-modal span {
-  width: 43px;
+  width: 50px;
   height: 43px;
   border-radius: 25px;
   background: grey;
@@ -54,6 +54,7 @@
   font-size: 0.975rem;
   color: black;
   font-weight: 500;
+  margin-left: 9px;
 }
 .job-content {
   color: #6a7381;
@@ -61,14 +62,15 @@
   margin: 12px 8px 4px 8px;
 }
 .job-modal-info {
-  padding: 0.9rem;
-  padding-top: 0.813rem;
+  padding: 0 0.9rem;
+  /* padding-top: 0.813rem; */
 }
 .job-details-point {
   margin-top: 1.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  overflow-y: scroll;
 }
 .job-details-point p {
   display: flex;
@@ -76,13 +78,18 @@
   font-size: 12px;
   color: #6a7381;
   flex-shrink: 1;
+  margin: 6px;
 }
 .job-details-point p span {
   margin-right: 6px;
   color: black;
 }
+.job-details-container {
+  overflow-y: scroll;
+  height: 324px;
+}
 .modal-btn {
-  margin-top: 3.64rem;
+  margin-top: 2.64rem;
   font-size: 1rem;
   font-weight: 700;
   /* border: 2px solid;
@@ -99,7 +106,7 @@
   margin: 10px;
   margin-top: -10px;
   display: flex;
-  width: 100%;
+
   align-items: center;
   justify-content: flex-end;
 }
@@ -120,12 +127,12 @@
     max-width: 23.625rem;
   }
   .job-details-point {
-    margin-top: 1.3rem;
+    margin-top: 1.2rem;
   }
 }
 @media only screen and (max-width: 485px) {
   .job-card-modal {
-    max-width: 20.625rem;
+    max-width: 21.625rem;
     padding: 1.3rem 1.25rem;
   }
   .right-direction {
@@ -135,13 +142,13 @@
 }
 @media only screen and (max-width: 400px) {
   .job-card-modal {
-    max-width: 15.625rem;
+    max-width: 19.625rem;
     padding: 1.3rem 1.15rem;
     max-height: 42.625rem;
   }
   .job-card-head-modal span {
-    width: 46px;
-    height: 39px;
+    width: 50px;
+    height: 42px;
   }
   .modal-btn {
     margin-top: 0.64rem;

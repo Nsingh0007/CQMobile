@@ -23,6 +23,12 @@
     rgba(255, 255, 255, 0) 98.26%
   );
 }
+.career-parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 
 /* -----------------------middleTopContainer ---------------------*/
 
@@ -72,6 +78,16 @@
   color: #202948;
   box-shadow: 0px 2px 8px rgba(106, 115, 129, 0.12);
 }
+.core-values-icon {
+  margin: 10px 12%;
+
+  padding: 0 0px;
+  width: 80%;
+  /* ALIGN-SELF: center; */
+  justify-content: center;
+  align-self: center;
+}
+
 .value-card img {
   width: 90px;
   height: 84px;
@@ -185,6 +201,9 @@
     font-size: 0.9rem;
   }
 } */
+.job-details-container {
+  overflow-y: scroll;
+}
 @media only screen and (max-width: 590px) {
   .value-card {
     max-height: 16rem;
@@ -204,7 +223,7 @@
   .value-card {
     box-shadow: 0px 2px 8px rgba(106, 115, 129, 0.12);
     max-height: 224px;
-    max-width: 160px;
+    max-width: 158px;
     padding-bottom: 10px;
   }
   .value-card h3 {
@@ -354,7 +373,7 @@
   background-color: #fff;
 }
 .job-card {
-  max-width: 19.304rem;
+  max-width: 16.304rem;
   max-height: 26.9938rem;
   margin: 1rem 0;
   padding: 0;
@@ -375,7 +394,7 @@
   font-weight: 700;
 }
 .job-card-head span {
-  width: 46px;
+  width: 57px;
   height: 43px;
   border-radius: 25px;
   background: grey;
@@ -399,11 +418,11 @@
   padding: 0.9rem;
 }
 .job-slider-outer {
-  width: 94%;
+  /* width: 94%; */
   margin-top: 20px;
 }
 .job-slider {
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .job-details {
@@ -576,9 +595,13 @@
   }
 }
 
-@media screen and (max-width: 395px) {
+@media screen and (max-width: 391px) {
   .flex-container {
     gap: 12px;
+  }
+  .value-card {
+    max-height: 220px;
+    max-width: 155px;
   }
 }
 @media only screen and (max-width: 375px) {
