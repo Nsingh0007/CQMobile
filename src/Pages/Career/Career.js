@@ -17,7 +17,7 @@ function Career() {
   };
   return (
     <div className="main">
-      <div class="parallax__layer parallax__layer--back">
+      <div class="parallax__layer parallax__layer--back career">
         <TopContainer TopContent={TopContent} />
       </div>
       <div class="parallax">

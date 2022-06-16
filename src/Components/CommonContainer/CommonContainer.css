@@ -6,3 +6,8 @@
   text-align: left;
   padding: 10rem 5rem;
 }
+@media screen and (max-width: 377) {
+  .Main-container-inner {
+    padding: 24px 0 0 24px;
+  }
+}

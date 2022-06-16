@@ -62,12 +62,14 @@ function MiddleBottomContainer() {
       />
       <Container inner="job-container">
         <h3 className="head-title">Job openings</h3>
+      <Slider sliderInner="openinng">
         <div className="tag-container">
           <button className="pill">Design</button>
           <button className="pill">Product</button>
           <button className="pill">Marketing</button>
           <button className="pill">Business</button>
         </div>
+        </Slider>
         <Slider sliderOuter="job-slider-outer" sliderInner="job-slider">
           {JobData.map((job, index) => (
             <JobCard job={job} key={index} />

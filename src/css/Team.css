@@ -29,6 +29,14 @@
 }
 .profile-img-background {
 }
+.profile-style1 img {
+  max-width: 157px;
+  max-height: 198px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .profileContainer {
   flex-wrap: wrap;
   padding-bottom: 3rem;
@@ -59,7 +67,7 @@
 }
 @media only screen and (max-width: 698px) {
   .profileContainer {
-    padding: 6rem 1rem;
+    padding: 6rem 3rem;
     justify-content: center;
     gap: 10rem 6rem;
   }
@@ -69,6 +77,51 @@
   }
 }
 
+@media only screen and (max-width: 630px) {
+  .profileContainer {
+    gap: 5rem 3rem;
+    padding: 8rem 2rem;
+  }
+  .left-content {
+    padding: 1rem;
+  }
+  .team-container {
+    padding: 1rem;
+  }
+  .profile-img-background {
+    max-width: 14.875rem;
+    max-height: 13.125rem;
+    left: 5%;
+    padding: 1px;
+    padding-top: 7px;
+    padding-bottom: 0px;
+  }
+  .profile-style1 {
+    padding: 4.55rem 0;
+    max-width: 8.438rem;
+    max-height: 14.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .profile-style1 img {
+    max-width: 120px;
+    max-height: 198px;
+  }
+  .profile-content1 {
+    text-align: left;
+    left: 0;
+    bottom: -16px;
+  }
+  .profile-style1 img {
+    /* max-width: 7.813rem;
+    max-height: 8.375rem; */
+
+    /* bottom: 52%; */
+    /* bottom: 69px; */
+  }
+}
+
+/* 
 @media only screen and (max-width: 630px) {
   .profileContainer {
     gap: 5rem 0.5rem;
@@ -101,112 +154,23 @@
     max-width: 7.813rem;
     max-height: 8.375rem;
     margin: 0 0.8rem;
-    /* bottom: 52%; */
+    /* bottom: 52%; 
     bottom: 69px;
   }
-}
+} */
 
-@media only screen and (max-width: 426px) {
+@media only screen and (max-width: 480px) {
   .profileContainer {
-    gap: 5rem 1rem;
-    background: linear-gradient(
-      177.8deg,
-      #f0fcfb 1.96%,
-      rgba(255, 255, 255) 98.26%
-    );
-  }
-  .commonClass h2 {
-    /* H1-800 */
-
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 32px;
-    line-height: 42px;
-    /* or 131% */
-
-    text-align: center;
-
-    /* Primary/Primary G1 */
-
-    color: #299d90;
-  }
-  .top-content p {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-
-    text-align: center;
-
-    /* Grey Scale/Neutral 600 */
-
-    color: #6a7381;
-  }
-  .profile-style1 img {
-    /* max-width: 6.1rem; */
+    gap: 4rem 2rem;
+    padding: 6rem 1rem;
   }
   .profile-img-background {
-    left: 3.1%;
+    left: 5%;
   }
-  .profileContainer {
-    gap: 5rem 0.5rem;
-    /* padding: 8rem 2rem; */
-    background: linear-gradient(
-      177.8deg,
-      #f0fcfb 1.96%,
-      rgba(255, 255, 255) 98.26%
-    );
-  }
-  .team-parallax {
-    background: #f0fcfb !important;
-  }
-
-  /* .profile-style1 {
-    max-width: 39% !important;
-  }
-  .profileContainer {
-    gap: 5rem 0.5rem;
-    padding: 8rem 1.4rem;
-  }
-  .profile-content-box,
-  .profile-style1 {
-    padding: 90px 0;
-  }
-  .profile-style1 > .profile-img-background {
-    bottom: 52%;
-    padding: 8px;
-    left: 1%;
-    padding-bottom: 0;
-  }
-  .profile-content1 {
-    bottom: 3px;
-  }
-  .profile-content1 h4 {
-    margin: 6px 0px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-    color: #202948;
-  }
-  .profile-content1 p {
-    margin: 6px 0px;
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 16px;
-    color: #6a7381;
-  }
-  .profile-content1:last-child {
-    color: #a8b1bd;
-  } */
 }
 @media only screen and (max-width: 362px) {
   .profileContainer {
-    gap: 5rem 0rem;
+    gap: 5rem 0.3rem;
     padding: 8rem 0.4rem;
   }
   /* .profile-style1 {

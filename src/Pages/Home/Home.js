@@ -23,6 +23,8 @@ import { useNavigate } from "react-router-dom";
 function Home() {
   const [rotateRight, setRotateRight] = useState(320);
   const [rotateLeft, setRotateLeft] = useState(42);
+  const [rotateRightDegree, setRotateRightDegree] = useState(320);
+  const [rotateLeftDegree, setRotateLeftDegree] = useState(42);
   const [opacity, setOpacity] = useState(1);
   const TopContent = {
     heading: "Track and pay bills of all your Debt",
@@ -32,47 +34,63 @@ function Home() {
     classname: "top-content",
   };
   let lastScrollTop = 0;
+  const checkpoint = 300;
   function dir() {
-    const position = window.scrollY;
-    let opa = (opacity / position) * 5;
-    let right = rotateRight + position / 0.48;
-    let left = rotateLeft - position / 0.51;
+    let content = document.querySelector(".parallax-home");
+    const position = content.scrollTop;
 
+    let opa = opacity / (position / 100.8);
+    let right = rotateRight + position / 59.8;
+    let left = rotateLeft - position / 53.5;
+    console.log("position", position);
+    console.log("right", right);
+    console.log("left", left);
+    console.log("opacity", opa);
+    if (position <= checkpoint) {
+      opa = 1 - position / checkpoint;
+      setOpacity(opa);
+    } else {
+      opa = 1;
+      setOpacity(opa);
+    }
     // or window.addEventListener("scroll"....
-    let st = window.scrollY || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    let st = window.scrollY || position; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
     if (st > lastScrollTop) {
       // downscroll code
-console.log("down")
+
       if (position > 0) {
-        setOpacity(opa);
+        // setOpacity(1 - opa);
         if (322 < right && right < 366) {
-          console.log("righttt", right);
-          setRotateRight(right);
+          // console.log("righttt", right);
+          setRotateRightDegree(360);
         } else {
         }
         if (-10 < left && left < 42) {
-          console.log("first", left, 0 < left && left < 42);
-
-          setRotateLeft(left);
+          setRotateLeftDegree(0);
         }
       }
     } else {
       //scroll up
-      if (window.scrollY > 1) {
-        setOpacity(opa * 10);
-
-        if (!322 < right && right < 366) {
-          setRotateRight(right);
-        } else {
-        }
-        if (!0 < left && left < 42) {
-          setRotateLeft(left);
-        }
+      // if (position > 1) {
+      //   setOpacity(opa * 10);
+      // }
+      if (!319 < right && right < 366) {
+        // console.log("hello");
+        setRotateRightDegree(320);
       }
+
+      if (!0 < left && left <= 42) {
+        // console.log("scroll-left-again", left);
+        // console.log("rotate left", !0 < left && left < 45);
+        setRotateLeftDegree(42);
+        // console.log("hello done");
+      }
+      // }
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
   }
   const handleScroll = () => {
+    console.log("first");
     dir();
   };
 
@@ -131,7 +149,10 @@ const mobileScroll=(e)=>{
   };
   return (
     <>
-      <div className="parallax">
+      <div
+        onScroll={() => handleScroll()}
+        className="parallax scrollClass"
+      >
         <div class="parallax__layer parallax__layer--back">
           <Container
             inner={`commonClass ${

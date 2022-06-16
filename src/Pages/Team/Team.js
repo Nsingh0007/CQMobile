@@ -19,6 +19,7 @@ function Team() {
   return (
     <>
       <div class="parallax__layer parallax__layer--back teampage">
+       
         <TopContainer TopContent={TopContent} />
       </div>
       <div class="parallax">
@@ -26,8 +27,7 @@ function Team() {
           <Container inner="team-container top-home-container">
             <h3 className="head-title">A - Team</h3>
             <p>
-              Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding
-              way.
+              Credit Cards, Buy Now Pay Later and Loans in a quick and rewarding way. {window.innerWidth}X{window.innerHeight}
             </p>
             <div className="background-blur-team"></div>
           </Container>

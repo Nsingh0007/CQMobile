@@ -504,7 +504,7 @@
     padding: 15% 0 0 0;
   }
   .top-content h2 {
-    max-width: 80%;
+    max-width: 81%;
   }
   .square-box {
     padding: 20%;
@@ -614,7 +614,7 @@
 
   /* ################# */
   .top-content {
-    padding: 101px 40px;
+    padding: 75px 40px;
     position: fixed;
     top: 0;
   }
@@ -699,9 +699,7 @@
 
     margin: 44px 0 0 0;
   }
-  .profile-img-background {
-    left: 3.4%;
-  }
+
   .profile-style img {
     max-width: 9.875rem;
     max-height: 12.375rem;
